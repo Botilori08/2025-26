@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("12 000 szám")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecc2d0bbcb1dd554d01bbe1a38f576d272bd72fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8acefa3961d94cc47d5b88cc16cddf44d90de62f")]
 [assembly: System.Reflection.AssemblyProductAttribute("12 000 szám")]
 [assembly: System.Reflection.AssemblyTitleAttribute("12 000 szám")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

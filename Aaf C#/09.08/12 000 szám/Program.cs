@@ -1,12 +1,13 @@
-﻿namespace _12_000_szám
+﻿using System.Collections.Immutable;
+using System;
+
+namespace _12_000_szám
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
 			Random rand = new Random();
-
-			List <long> szamok = new List<long>();
 
 			StreamWriter sr = new StreamWriter("22jegyuek.txt");
 			
@@ -34,20 +35,37 @@
 
             sr.Close();
 
+
             string[] beolvasottSzamok = File.ReadAllLines("22jegyuek.txt");
 
-			for (int i = 0; i < beolvasottSzamok.Length; i++)
+			List <string> szamok = new List <string>();
+
+
+
+			for(int i = 0; i < beolvasottSzamok.Length;i++)
 			{
-				szamok.Add(long.Parse(beolvasottSzamok[i]));
+				szamok.Add(beolvasottSzamok[i]);
 			}
 
-			long legnagyobb= 0;
-			long legkisebb = szamok[0];
+			var rendezett = beolvasottSzamok.ToImmutableSortedSet();
 
-			for (int i = 0; i < szamok.Count; i++)
+			string legnagyobb= rendezett[rendezett.Count-1];
+			string legkisebb = rendezett[0];
+			
+			Console.WriteLine(legkisebb);
+			Console.WriteLine(legnagyobb);
+
+			int osszeg = 0;
+			for(int i = 0;i < legkisebb.Length;i++)
 			{
-				if
+				for(int j = 0;j<legnagyobb.Length;j++)
+				{
+					osszeg = legkisebb[i] + legnagyobb[i];
+				}
 			}
+
+            Console.WriteLine(osszeg);
+
 
 
 			
