@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\boti.lorant.ferenc.2\\source\\repos\\2025-26\\Aaf C#\\09.08\\12 000 sz\u00E1m\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD3C279-A48D-4B6C-AD50-EEFC4A175F6E}|12 000 sz\u00E1m.csproj|c:\\users\\boti.lorant.ferenc.2\\source\\repos\\2025-26\\aaf c#\\09.08\\12 000 sz\u00E1m\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD3C279-A48D-4B6C-AD50-EEFC4A175F6E}|12 000 sz\u00E1m.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\boti.lorant.ferenc.2\\source\\repos\\2025-26\\Aaf C#\\09.08\\12 000 sz\u00E1m\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\boti.lorant.ferenc.2\\source\\repos\\2025-26\\Aaf C#\\09.08\\12 000 sz\u00E1m\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-08T08:00:26.302Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
