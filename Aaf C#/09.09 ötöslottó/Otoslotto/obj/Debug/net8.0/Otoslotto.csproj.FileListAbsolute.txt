@@ -1,0 +1,15 @@
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\bin\Debug\net8.0\Otoslotto.exe
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\bin\Debug\net8.0\Otoslotto.deps.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\bin\Debug\net8.0\Otoslotto.runtimeconfig.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\bin\Debug\net8.0\Otoslotto.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\bin\Debug\net8.0\Otoslotto.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.AssemblyInfoInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.AssemblyInfo.cs
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.csproj.CoreCompileInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.sourcelink.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\refint\Otoslotto.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\Otoslotto.genruntimeconfig.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.09 ötöslottó\Otoslotto\obj\Debug\net8.0\ref\Otoslotto.dll
