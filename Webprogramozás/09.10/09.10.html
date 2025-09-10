@@ -13,7 +13,8 @@
 
     <div id="uzenet"></div>
 
-    <table id="tablazat"></table>
+    <table id="tablazat" border="1"></table>
+
     <script>
 
         let szamok = [];
@@ -31,7 +32,7 @@
             {
                 document.getElementById("uzenet").innerHTML="A megadott szám az értéhatáron kívül van"
             }
-            console.log(szamok);
+            //console.log(szamok);
 
             let kivalogatott = [];
 
@@ -44,14 +45,22 @@
             }
 
             console.log(kivalogatott)
+            const tablazat = document.getElementById("tablazat")
+            tablazat.innerHTML = "";
+            kivalogatott.forEach(e => {
+                const sor = document.createElement("tr")
+                
+                e.forEach(f => {
+                    const oszlop = document.createElement("td")
+                    oszlop.innerHTML = f;
+                    sor.appendChild(oszlop);
+                })
+                tablazat.appendChild(sor);
+            })
 
-            for(let i =0;i < kivalogatott.length;i++)
-            {
-                for(let j =0;j < kivalogatott[i].length;j++)
-                {
-                    document.getElementById("tablazat").innerHTML += "<tr></tr>"
-                }                
-            }
+            
+
+
 
 
         }
