@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Mátrix</title>
+    <style>
+        div{
+            border:1px solid black;
+        }
+
+        .egyLED{
+            float: inline-start;
+            width: 20px;
+            height: 50px;
+
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="matrix"></div>
+
+    <script>
+
+        const matrix = document.getElementById("matrix");
+        
+
+        //LED.innerHTML = "This is a paragraph";
+        
+        for(let i = 0;i < 100;i++)
+        {
+            const LED = document.createElement("div");
+            LED.className = "egyLED"
+            matrix.appendChild(LED);
+        }
+
+
+
+    </script>
+</body>
+</html>
