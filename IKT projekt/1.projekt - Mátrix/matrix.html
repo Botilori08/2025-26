@@ -10,13 +10,29 @@
         }
 
         .egyLED{
-            float: inline-start;
-            width: 20px;
-            height: 50px;
+
+            display: inline-block;
+            _float: inline-start;
+            width: auto;
+            height: auto;
 
 
         }
-    </style>
+        .egySor{
+            _display: inline-block;
+            _float: inline-start;
+            width: auto;
+            height: auto;
+            border: 0px;
+
+        }
+
+        #matrix
+        {
+            height:auto;
+            padding: 0;
+        }
+        </style>
 </head>
 <body>
     
@@ -29,12 +45,22 @@
 
         //LED.innerHTML = "This is a paragraph";
         
-        for(let i = 0;i < 100;i++)
+        for(let k = 0;k < 16;k++)
         {
-            const LED = document.createElement("div");
-            LED.className = "egyLED"
-            matrix.appendChild(LED);
+            const sor = document.createElement("div");
+            sor.className = "egySor";
+            matrix.appendChild(sor);
+            for(let i = 0;i < 100;i++)
+            {
+                const LED = document.createElement("div");
+                LED.className = "egyLED";
+                //LED.innerHTML = "a";
+                LED.style.width = "10px";
+                LED.style.height = "10px";
+                sor.appendChild(LED);
+            }
         }
+
 
 
 
