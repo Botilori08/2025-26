@@ -1,0 +1,15 @@
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\bin\Debug\net8.0\szavak.exe
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\bin\Debug\net8.0\szavak.deps.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\bin\Debug\net8.0\szavak.runtimeconfig.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\bin\Debug\net8.0\szavak.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\bin\Debug\net8.0\szavak.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.AssemblyInfoInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.AssemblyInfo.cs
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.csproj.CoreCompileInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.sourcelink.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\refint\szavak.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\szavak.genruntimeconfig.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.16\szavak\obj\Debug\net8.0\ref\szavak.dll
