@@ -15,8 +15,6 @@
             _float: inline-start;
             width: auto;
             height: auto;
-
-
         }
         .egySor{
             _display: inline-block;
@@ -24,41 +22,88 @@
             width: auto;
             height: auto;
             border: 0px;
+            padding: 0%;
 
         }
 
         #matrix
         {
             height:auto;
+            width:fit-content;
             padding: 0;
+            margin: auto;
         }
+
+        #szoveg
+        {
+            margin-bottom: 50px;
+        }
+
         </style>
 </head>
 <body>
+    
+    <input type="text" id="szoveg">
+
+    <button onclick="rajzol()">Rajzol</button>
     
     <div id="matrix"></div>
 
     <script>
 
+        const sorok = 16;
+        const oszlopok = 100;
         const matrix = document.getElementById("matrix");
         
 
         //LED.innerHTML = "This is a paragraph";
         
-        for(let k = 0;k < 16;k++)
+        let id = 1;
+        for(let k = 0;k < sorok;k++)
         {
             const sor = document.createElement("div");
             sor.className = "egySor";
             matrix.appendChild(sor);
-            for(let i = 0;i < 100;i++)
+            for(let i = 0;i < oszlopok;i++)
             {
                 const LED = document.createElement("div");
                 LED.className = "egyLED";
+                LED.id = "C-"+id;
                 //LED.innerHTML = "a";
                 LED.style.width = "10px";
                 LED.style.height = "10px";
                 sor.appendChild(LED);
+                id++;
             }
+        }
+
+        function  rajzol()
+        {
+            const karakterek= [                    
+                    "1000000001",
+                    "1000000001",
+                    "1000000001",
+                    "1111111111",
+                    "1000000001",
+                    "1000000001",
+                    "1000000001",];
+
+            let aktualis = 1;
+            for(let i = 0;i < karakterek.Length;i++)
+            {
+                for(let j = 0;j< karakterek[i].Length;j++)
+                {   
+                    if(karakterek[i][j] == 1)
+                    {
+                        document.getElementById("C-"+aktualis).style.backgroundColor = "red";
+                    }
+                    
+                }
+
+            }
+
+            
+                
         }
 
 
