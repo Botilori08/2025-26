@@ -1,0 +1,15 @@
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\bin\Debug\net8.0\OOP 09.18.exe
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\bin\Debug\net8.0\OOP 09.18.deps.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\bin\Debug\net8.0\OOP 09.18.runtimeconfig.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\bin\Debug\net8.0\OOP 09.18.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\bin\Debug\net8.0\OOP 09.18.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.AssemblyInfoInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.AssemblyInfo.cs
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.csproj.CoreCompileInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.sourcelink.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\refint\OOP 09.18.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\OOP 09.18.genruntimeconfig.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\09.18 OOP\OOP 09.18\obj\Debug\net8.0\ref\OOP 09.18.dll

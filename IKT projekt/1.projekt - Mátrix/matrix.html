@@ -77,36 +77,33 @@
             }
         }
 
+        const karakterek= [                    
+            "1000000001",
+            "1000000001",
+            "1000000001",
+            "1111111111",
+            "1000000001",
+            "1000000001",
+            "1000000001",];
+
+
         function  rajzol()
         {
-            const karakterek= [                    
-                    "1000000001",
-                    "1000000001",
-                    "1000000001",
-                    "1111111111",
-                    "1000000001",
-                    "1000000001",
-                    "1000000001",];
+
+            let kodok = [];
 
             let aktualis = 1;
             for(let i = 0;i < karakterek.Length;i++)
             {
                 for(let j = 0;j< karakterek[i].Length;j++)
                 {   
-                    if(karakterek[i][j] == 1)
-                    {
-                        document.getElementById("C-"+aktualis).style.backgroundColor = "red";
-                    }
-                    
+                    console.log(karakterek[i][j]);
                 }
-
+                
             }
 
-            
-                
+            console.log(kodok);
         }
-
-
 
 
     </script>
