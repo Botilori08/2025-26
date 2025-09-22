@@ -94,7 +94,7 @@
             let aktualis = 1;
             for(let i = 0;i < karakterek.length;i++)
             { 
-                for(let j = 0;j < karakterek.length;j++)
+                for(let j = 0;j < karakterek[i].length;j++)
                 {
                     if(karakterek[i][j] == 1)
                     {
@@ -103,7 +103,7 @@
                     aktualis++;
 
                 }
-                aktualis+=100;
+                aktualis+=oszlopok;
                 
                 
                 
