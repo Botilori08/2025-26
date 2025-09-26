@@ -83,28 +83,61 @@
         function  rajzol()
         {
             let karakterek= [                    
-            "1000000001",
-            "1000000001",
-            "1000000001",
-            "1111111111",
-            "1000000001",
-            "1000000001",
-            "1000000001"];
+            [
+                "0110",
+                "1001",
+                "1111",
+                "1001",
+                "1001"
+            ],
+
+            [
+                "1110",
+                "1001",
+                "1110",
+                "1001",
+                "1110"
+            ],
+
+        ];
+
+        let  
 
             let aktualis = 1;
             for(let i = 0;i < karakterek.length;i++)
             { 
                 for(let j = 0;j < karakterek[i].length;j++)
                 {
-                    if(karakterek[i][j] == 1)
+                    for(let k =0;k < karakterek[i][j].length;k++)
                     {
-                        document.getElementById("C-"+aktualis).style.backgroundColor = "red";
+                        if(karakterek[i][j][k] == 1)
+                        {
+                            document.getElementById("C-"+aktualis).style.backgroundColor = "red";
+                        }
+                        aktualis++;
                     }
-                    aktualis++;
+                    aktualis=Math.ceil(aktualis/100)*100+1;
+                }
+            }
+
+            aktualis = 1;
+            
+            for(let i = 0;i < karakterek.length;i++)
+            { 
+                for(let j = 0;j < karakterek[i].length;j++)
+                {
+                    for(let k =0;k < karakterek[i][j].length;k++)
+                    {
+                        if(karakterek[i][j][k] == 1)
+                        {
+                            document.getElementById("C-"+aktualis).style.backgroundColor = "red";
+                        }
+                        aktualis++;
+                    }
+                    aktualis=Math.ceil(aktualis/100)*100+1;
+                    
 
                 }
-                aktualis+=oszlopok;
-                
                 
                 
             }
