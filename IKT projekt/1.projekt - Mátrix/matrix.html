@@ -15,6 +15,7 @@
             _float: inline-start;
             width: auto;
             height: auto;
+            background-color: white;
         }
         .egySor{
             _display: inline-block;
@@ -72,6 +73,7 @@
                 //LED.innerHTML = "a";
                 LED.style.width = "10px";
                 LED.style.height = "10px";
+                LED.style.backgroundColor = "white";
                 sor.appendChild(LED);
                 id++;
             }
@@ -83,10 +85,13 @@
         function  rajzol()
         {
 
+            //document.getElementsByClassName("egyLED").style.backgroundColor = "white";
+
+
             let szoveg = document.getElementById("szoveg").value;
 
 
-            let betuk = ["a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j", "k", "l", "m", "n", "o", "ó", "ö", "ő", "p", "r", "s", "t", "u", "ú", "ü", "ű", "v", "z"]
+            let betuk = ["a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j", "k", "l", "m", "n", "o", "ó", "ö", "ő", "p", "r", "s", "t", "u", "ú", "ü", "ű", "v","w","x","y", "z"]
 
             console.log(betuk.length)
 
@@ -289,6 +294,27 @@
                 "1001",
                 "1001"
             ],
+            [
+                "0110",
+                "1001",
+                "1111",
+                "1001",
+                "1001"
+            ],
+                                                            [
+                "0110",
+                "1001",
+                "1111",
+                "1001",
+                "1001"
+            ],
+                                                            [
+                "0110",
+                "1001",
+                "1111",
+                "1001",
+                "1001"
+            ],
                                                 [
                 "0110",
                 "1001",
@@ -313,27 +339,34 @@
 
             ];
 
+            let kiirando = [];
 	
 			for(let i = 0;i < szoveg.length;i++)
 			{
-				szoveg[i]
-				
+                for(let j =0; j < betuk.length;j++)
+                {
+                    if(szoveg[i] == betuk[j])
+                    {
+                        kiirando.push(karakterek[j])
+                    }	
+                }
+		
 				
 			}
 
 
-            console.log(karakterek)
+            console.log(kiirando)
 
-            let kiirando = [];
+            
 
             let aktualis = 1;
-            for(let j = 0;j < karakterek[0].length;j++)
+            for(let j = 0;j < kiirando[0].length;j++)
             { 
-                for(let i = 0;i < karakterek.length;i++)
+                for(let i = 0;i < kiirando.length;i++)
                 {
-                    for(let k =0;k < karakterek[i][j].length;k++)
+                    for(let k =0;k < kiirando[i][j].length;k++)
                     {
-                        if(karakterek[i][j][k] == 1)
+                        if(kiirando[i][j][k] == 1)
                         {
                             document.getElementById("C-"+aktualis).style.backgroundColor = "red";
                         }
