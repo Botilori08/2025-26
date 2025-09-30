@@ -1,0 +1,15 @@
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\bin\Debug\net8.0\Béla.exe
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\bin\Debug\net8.0\Béla.deps.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\bin\Debug\net8.0\Béla.runtimeconfig.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\bin\Debug\net8.0\Béla.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\bin\Debug\net8.0\Béla.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.AssemblyInfoInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.AssemblyInfo.cs
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.csproj.CoreCompileInputs.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.sourcelink.json
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\refint\Béla.dll
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.pdb
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\Béla.genruntimeconfig.cache
+C:\Users\boti.lorant.ferenc.2\source\repos\2025-26\Aaf C#\Doga 09.17\Béla\obj\Debug\net8.0\ref\Béla.dll
