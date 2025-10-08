@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tetronímó Torpedó</title>
+    <title>Tetromínó Torpedó</title>
 
     <style>
         .cella
@@ -16,10 +16,51 @@
 
 </head>
 <body onload="init()">
-    <h1>Tetronímó Torpedó</h1>
+    <h1>Tetromínó Torpedó</h1>
     <table id="jatekter"></table>
 
     <script>
+        
+        class urhajo
+        {
+            constructor(tipus, szin, forgatas, x, y)
+            {
+                //tipus, szín, forgatás, koordináták
+
+                const alakok = [
+                    [{x:0,y:0},{x:1,y:0},{x:2,y:0},{x:2,y:0},],
+					
+                    [{x:0,y:0},{x:1,y:0},{x:0,y:1},{x:1,y:1},],
+					
+                    [{x:1,y:0},{x:0,y:1},{x:1,y:1},{x:2,y:1},],
+					
+                    [{x:0,y:0},{x:1,y:0},{x:2,y:0},{x:2,y:1},],
+					
+                    [{x:2,y:0},{x:0,y:1},{x:1,y:1},{x:2,y:1},],
+					
+                    [{x:1,y:0},{x:2,y:0},{x:0,y:1},{x:1,y:1},],
+					
+                    [{x:0,y:0},{x:1,y:0},{x:1,y:1},{x:2,y:1},]
+
+                ];
+
+
+				this.tipus = tipus;
+				this.szin = szin;
+				this.forgatas = forgatas;
+				this.x = x;
+				this.y = y;
+
+				this.elemek = alakok[tipus];
+
+				forgat()
+				{
+					
+				}
+
+            }
+        }
+
 
         const meret = {"sor":12,"oszlop":12};
 
