@@ -6,7 +6,7 @@
     <title>Labda</title>
 </head>
 <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
 	<script>
 
 		class labda
@@ -33,16 +33,25 @@
 			{
 				this.x += this.vX;
 				this.y += this.vY;
+				let utkozesVolt = false;
 				if(ctx.canvas.clientWidth - this.x <= this.sugar || this.x <= this.sugar)
 				{
 					this.vX*=-1;
-
+					utkozesVolt = true;
 				}
 				if(ctx.canvas.clientHeight - this.y <= this.sugar || this.y <= this.sugar)
 				{
 					this.vY*=-1;
-					
+					utkozesVolt = true
 				}
+
+				if(utkozesVolt)
+				{
+					this.x += this.vX;
+					this.y += this.vY;
+				}
+
+
 			}
 		}
 
@@ -51,19 +60,32 @@
 
 		let ctx = c.getContext("2d");
 
+		const labdaDarab = 10;
 		
 
 		let l = new labda(100,100,50,10,8);
 
 
+		const labdak = [];
 
+		for(let i = 0;i < labdaDarab;i++)
+		{
+			let r = Math.floor(Math.random()*20)+10;
+			let x = Math.floor(Math.random()*c.clientWidth-4*r)+2*r
+			let y = Math.floor(Math.random()*c.clientHeight-4*r)+2*r
+			let vX = Math.floor(Math.random()*14)+1
+			let vY = Math.floor(Math.random()*14)+1
+			labdak.push(new labda(x,y,r,vX,vY))
+		}
 
 
 		function pattog()
 		{
-			ctx.clearRect(0,0,500,500)
+			ctx.clearRect(0,0,ctx.canvas.clientWidth,ctx.canvas.clientHeight);
+			labdak.forEach(l => {			
 			l.rajzol(ctx);
-			l.lep(ctx)
+			l.lep(ctx);})
+
 			requestAnimationFrame(pattog);
 		}
 
