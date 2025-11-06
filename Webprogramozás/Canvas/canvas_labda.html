@@ -53,6 +53,54 @@
 
 
 			}
+
+			utkozes(masik)
+			{
+				if(masik instanceof fal)
+				{
+					this.#falnakUtkozes(masik)
+				}
+				else if(masik instanceof labda)
+				{
+					this.#labdanakUtkozes(masik)
+				}
+
+			}
+
+			#falnakUtkozes(masik)
+			{
+				//console.log("Hello")
+			}
+
+			#labdanakUtkozes(masik)
+			{
+				return false;
+			}
+
+		}
+
+
+
+
+		class fal
+		{
+			constructor(x,y,width,height)
+			{
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+			}
+
+			rajzol(ctx)
+			{
+				ctx.beginPath();
+				ctx.rect(this.x,this.y,this.width,this.height);
+				ctx.fillStyle = "red";
+				ctx.fill();
+				ctx.stroke();
+			}
+
 		}
 
 
@@ -65,14 +113,16 @@
 
 		let l = new labda(100,100,50,10,8);
 
+		const fal1 = new fal(100,100,20,100);
+
 
 		const labdak = [];
 
 		for(let i = 0;i < labdaDarab;i++)
 		{
 			let r = Math.floor(Math.random()*20)+10;
-			let x = Math.floor(Math.random()*c.clientWidth-4*r)+2*r
-			let y = Math.floor(Math.random()*c.clientHeight-4*r)+2*r
+			let x = Math.floor(Math.random()*(c.clientWidth-4*r))+r
+			let y = Math.floor(Math.random()*(c.clientHeight-4*r))+r
 			let vX = Math.floor(Math.random()*14)+1
 			let vY = Math.floor(Math.random()*14)+1
 			labdak.push(new labda(x,y,r,vX,vY))
@@ -82,7 +132,12 @@
 		function pattog()
 		{
 			ctx.clearRect(0,0,ctx.canvas.clientWidth,ctx.canvas.clientHeight);
-			labdak.forEach(l => {			
+
+			fal1.rajzol(ctx);
+
+			labdak.forEach(l => {	
+			
+			l.utkozes(fal1);
 			l.rajzol(ctx);
 			l.lep(ctx);})
 
