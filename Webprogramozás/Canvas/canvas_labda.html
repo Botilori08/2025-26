@@ -42,7 +42,7 @@
 				if(ctx.canvas.clientHeight - this.y <= this.sugar || this.y <= this.sugar)
 				{
 					this.vY*=-1;
-					utkozesVolt = true
+					utkozesVolt = true;
 				}
 
 				if(utkozesVolt)
@@ -58,17 +58,61 @@
 			{
 				if(masik instanceof fal)
 				{
-					this.#falnakUtkozes(masik)
+					this.#falnakUtkozes(masik);
 				}
 				else if(masik instanceof labda)
 				{
-					this.#labdanakUtkozes(masik)
+					this.#labdanakUtkozes(masik);
 				}
 
 			}
 
 			#falnakUtkozes(masik)
 			{
+				let utkozesVolt = false;
+				const xs = masik.x;
+				const xe = masik.x +masik.width;
+				const ys = masik.y;
+				const ye = masik.y+masik.height;
+
+				const xs2 = this.x - this.sugar;
+				const xe2 = this.x + this.sugar;
+				const ys2 = this.y - this.sugar;
+				const ye2 = this.y + this.sugar;
+
+				if(
+
+				xe >= xs2 &&
+				xs <= xe2 &&
+				ye >= ys2 &&
+				ys <= ye2
+				)
+				{
+					this.x -= this.vX;
+					this.y -= this.vY;
+
+
+					if(Math.abs((xs+xe)/2 - this.x) >= Math.abs((ys+ye)/2 - this.y))
+					{
+						this.vX *= -1;
+					}
+
+					if(Math.abs((xs+xe)/2 - this.x) <= Math.abs((ys+ye)/2 - this.y))
+					{
+						this.vY *= -1;
+					}
+
+					utkozesVolt = true;
+
+					if(utkozesVolt)
+					{
+						this.x += this.vX;
+						this.y += this.vY;
+					}
+
+
+				}
+
 				//console.log("Hello")
 			}
 
@@ -113,7 +157,16 @@
 
 		let l = new labda(100,100,50,10,8);
 
-		const fal1 = new fal(100,100,20,100);
+		const fal1 = new fal(400,100,200,100);
+
+
+		const falak = [];
+
+		falak.push(new fal(400,100,200,100))
+		falak.push(new fal(100,100,200,100))
+		falak.push(new fal(400,500,200,100))
+		falak.push(new fal(400,100,200,100))
+		
 
 
 		const labdak = [];
@@ -133,11 +186,11 @@
 		{
 			ctx.clearRect(0,0,ctx.canvas.clientWidth,ctx.canvas.clientHeight);
 
-			fal1.rajzol(ctx);
+			falak.forEach(f => f.rajzol(ctx));
 
 			labdak.forEach(l => {	
 			
-			l.utkozes(fal1);
+			falak.forEach(f => l.utkozes(f));
 			l.rajzol(ctx);
 			l.lep(ctx);})
 
