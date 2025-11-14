@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="betolt()">
+    <div id="megjelenit"></div>
+    <script>
+
+        /*  Jelenítse meg az aktuális hőmérsékletet mind a 10 városban
+            Városnevek szerint rendezve
+            Számoljuk ki a napi átlaghőmérsékletet
+            Nappali hőmérséklet 7-5-ig átlag
+            Legnagyobb hőmérséklet (Melyik vároban mikor)
+            Legkisebbet -||-*/
+
+        const jelenleg = new Date().getHours();
+
+        let varosok = [];
+        let kivalogatottHofokok = [];
+
+        function betolt()
+        {
+            fetch("nov14_temps_hu.json")
+            .then(x => x.json())
+            .then(y => {
+                
+                y.cities.forEach(e => {
+                
+                varosok.push(e.name)
+                })
+
+                kivalogatottHofokok.push(y.hourly[jelenleg]);
+                
+
+                console.log(varosok);
+                console.log(kivalogatottHofokok);
+            })
+        }
+
+    </script>
+</body>
+</html>
