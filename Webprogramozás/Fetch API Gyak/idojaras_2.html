@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="betolt()">
+
+    <div id="kiir"></div>
+
+    <script>
+
+    
+    let esoOsszeg = 0;
+    let sorok =[];
+
+    let datumesEso = [];
+    /*összesen mennyi eső esett
+    jelenítsük meg weboldalban
+
+    Havonta mennyi eső esett
+    táblázatban megjeleníteni
+
+    Havonta napi átlag
+    Táblázatban (ugyanabba)
+
+    A legcsapadékosabb hónap legyen kék hátterű
+    a legszárazabbat pirossal*/
+        function betolt()
+        {
+            fetch("idojaras_2.csv")
+            .then(x => x.text())
+            .then(y => {
+
+
+                sorok = y.split("\r\n")
+                
+                sorok.forEach(e => {
+                    //console.log(e.split(";")[0]);
+
+                    datumesEso.push({datum: e.split(";")[0],eso: e.split(";")[2]});
+
+                    
+
+                })
+                
+                console.log(datumesEso)
+
+                datumesEso.forEach(e=> esoOsszeg+= parseInt(e.eso));
+
+                let span = document.createElement("span")
+                span.innerHTML = "Az évben leesett teljes csapadék: "+esoOsszeg+" mm"
+                document.getElementById("kiir").appendChild(span);
+                
+
+
+            })
+        }
+
+    </script>
+</body>
+</html>
+
+
