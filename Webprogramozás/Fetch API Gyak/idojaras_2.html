@@ -16,6 +16,10 @@
     let sorok =[];
 
     let datumesEso = [];
+
+    kiirDiv = document.getElementById("kiir");
+
+    let honapNevek = ["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
     /*összesen mennyi eső esett
     jelenítsük meg weboldalban
 
@@ -52,7 +56,58 @@
                 let span = document.createElement("span")
                 span.innerHTML = "Az évben leesett teljes csapadék: "+esoOsszeg+" mm"
                 document.getElementById("kiir").appendChild(span);
+
+                let honapok = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+                let esok = [];
+                let esotemp = 0;
+                honapok.forEach(e => 
+                {
+                    datumesEso.forEach(elem => {
+                        if(elem.datum.split(".")[1] == parseInt(e))
+                        {
+                            esotemp+=parseInt(elem.eso);
+                        }
+                    })
+                    esok.push(esotemp);
+                    
+
+                }
+                )
+
+
+                console.log(esok);
+
+
+                //Másik megoldás
+
+                let esok2 = [];
+
+                datumesEso.forEach(
+                    e => {
+                        if(esok2[parseInt(e.datum.split(".")[1])] === undefined)
+                        {
+                            esok2[parseInt(e.datum.split(".")[1])] = 0;
+                        }
+                        esok2[parseInt(e.datum.split(".")[1])] += parseInt(e.eso);
+                    }
+                )
                 
+                let tablazat = document.createElement("table")
+                tablazat.id = "tablazat";
+
+                tablazat.innerHTML += "<tr>";
+
+
+                esok2.forEach((e,index) =>
+                    {
+                        tablazat.innerHTML += "<tr><td>"+honapNevek[index-1]+"</td><td>"+e+"</td></tr>";
+                        console.log(index,e)
+                    }
+                )
+
+                kiirDiv.appendChild(tablazat);
+
 
 
             })
