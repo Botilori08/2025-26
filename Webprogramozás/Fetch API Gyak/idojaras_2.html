@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        table
+        {
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        td
+        {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body onload="betolt()">
 
@@ -14,8 +26,9 @@
     
     let esoOsszeg = 0;
     let sorok =[];
-
+    let esok = [];
     let datumesEso = [];
+    let atlagok = [];
 
     kiirDiv = document.getElementById("kiir");
 
@@ -45,11 +58,9 @@
 
                     datumesEso.push({datum: e.split(";")[0],eso: e.split(";")[2]});
 
-                    
-
                 })
                 
-                console.log(datumesEso)
+                //console.log(datumesEso)
 
                 datumesEso.forEach(e=> esoOsszeg+= parseInt(e.eso));
 
@@ -59,7 +70,7 @@
 
                 let honapok = [1,2,3,4,5,6,7,8,9,10,11,12];
 
-                let esok = [];
+
                 let esotemp = 0;
                 honapok.forEach(e => 
                 {
@@ -70,17 +81,15 @@
                         }
                     })
                     esok.push(esotemp);
-                    
-
                 }
                 )
 
 
-                console.log(esok);
+                //console.log(esok);
 
 
                 //Másik megoldás
-
+                
                 let esok2 = [];
 
                 datumesEso.forEach(
@@ -96,21 +105,55 @@
                 let tablazat = document.createElement("table")
                 tablazat.id = "tablazat";
 
-                tablazat.innerHTML += "<tr>";
-
 
                 esok2.forEach((e,index) =>
                     {
-                        tablazat.innerHTML += "<tr><td>"+honapNevek[index-1]+"</td><td>"+e+"</td></tr>";
-                        console.log(index,e)
+                        tablazat.innerHTML += "<tr id='sor'><td>"+honapNevek[index-1]+"</td><td>"+e+"</td></tr>";
+                        //console.log(index,e)
+                    }
+                )
+            
+                
+                kiirDiv.appendChild(tablazat);
+
+                
+                let harmincNaposak = [4,6,9,11]
+
+                let februar = 2;
+
+                esok2.forEach((e,index) =>
+                    {
+                        if(harmincNaposak.includes(index))
+                        {
+                            atlagok.push((e/30).toFixed(2))
+                        }
+                        if(februar == index)
+                        {
+                            atlagok.push((e/28).toFixed(2))
+                        }
+                        else
+                        {
+                            atlagok.push((e/31).toFixed(2))
+                        }
+
+
                     }
                 )
 
-                kiirDiv.appendChild(tablazat);
+                
+                let sorok = document.querySelectorAll("tr")
+
+                console.log(sorok)
+                
+                
 
 
 
             })
+
+
+
+
         }
 
     </script>

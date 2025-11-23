@@ -17,27 +17,43 @@
             Legkisebbet -||-*/
 
         const jelenleg = new Date().getHours();
-
-        let varosok = [];
+        let adatok = [];
         let kivalogatottHofokok = [];
+
 
         function betolt()
         {
+
+
             fetch("nov14_temps_hu.json")
             .then(x => x.json())
             .then(y => {
                 
                 y.cities.forEach(e => {
                 
-                varosok.push(e.name)
+                adatok.push({varos:e.name,adatok:e.hourly})
                 })
 
-                kivalogatottHofokok.push(y.hourly[jelenleg]);
-                
 
-                console.log(varosok);
-                console.log(kivalogatottHofokok);
+                let tablazat = document.createElement("table")
+                tablazat.id = "tablazat"
+
+                
+                adatok.forEach(e => 
+                    {                        
+                        tablazat.innerHTML += "<tr><td>"+e.varos+"</td><td>"+e.adatok[jelenleg]+"</td></tr>"
+                    }
+                )
+
+                let megjelenit = document.getElementById("megjelenit")
+
+                megjelenit.appendChild(tablazat)
+
+
+                
             })
+
+
         }
 
     </script>
