@@ -32,30 +32,32 @@
 
                 y.images.forEach(e => kepek.push(e));
 
+                let kiir = document.getElementById("kiir")
+
+                let tr= document.createElement("tr")
 
                 kepek.forEach((e,index) => 
                 {
-                    let kiir = document.getElementById("kiir")
-
-                    let tr= document.createElement("tr")
-                    tr.id = "sor"+index
-                    
-                    if(index%10 == 0)
-                    {
-                        kiir.innerHTML += "</tr><tr>"
-                    }
-                
                     let img = document.createElement("img")
                     img.src = e
                     img.id = "kep"+index
-                
+
+                    let td = document.createElement("td")
+                    
+                    document.getElementById("sor"+index)
+                    td.appendChild(img)
+
+                    if(index%10 == 0)
+                    {
+                        console.log(index)
+                        tr.id = "sor"+index
+                        tr.appendChild(td)
+                        kiir.appendChild(tr)
+                        
+                    }
 
                 })        
                 
-
-
-
-
             })
 
 
