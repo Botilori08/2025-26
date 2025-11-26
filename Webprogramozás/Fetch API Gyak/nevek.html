@@ -38,15 +38,14 @@
                     noiNevek.forEach((e,index) => {
                         let sor = document.createElement("tr")
                         
-                        let oszlop = document.createElement("td")
-                        oszlop.innerHTML = e.vezeteknev
+                        sor = cellatKeszit(sor,e.vezeteknev)
 
-                        sor.appendChild(oszlop)
+                        sor = cellatKeszit(sor,e.keresztnev)
 
-                        oszlop = document.createElement("td")
-                        oszlop.innerHTML = e.keresztnev
-
-                        sor.appendChild(oszlop)
+                        
+                        sor = cellatKeszit(sor,ferfiNevek[index].vezeteknev)
+                        
+                        sor = cellatKeszit(sor,ferfiNevek[index].keresztnev)
 
                         tablazat.appendChild(sor)
 
