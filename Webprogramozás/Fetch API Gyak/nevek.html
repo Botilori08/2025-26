@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevek</title>
+</head>
+<body onload="betolt()">
+
+    <table id="tablazat"></table>
+
+    <script>
+
+        let nevSzam = sorsol(5)+15;
+        let ferfiNevek = [];
+        let noiNevek = [];
+        let tablazat = document.getElementById("tablazat"); 
+
+        function betolt()
+        {
+            
+            fetch("nevek.json")
+            .then(x => x.json())
+            .then(y => 
+                {
+                    for(let i = 0;i < nevSzam;i++)
+                    {
+                        noiNevek.push({vezeteknev:y.surnames[sorsol(y.surnames.length)],
+                                    keresztnev:y.female_given_names[sorsol(y.female_given_names.length)]})
+                        ferfiNevek.push({vezeteknev:y.surnames[sorsol(y.surnames.length)],
+                                    keresztnev:y.male_given_names[sorsol(y.male_given_names.length)]})
+                    }
+
+                    
+                    console.log(noiNevek)
+                    console.log(ferfiNevek)
+
+                    noiNevek.forEach((e,index) => {
+                        let sor = document.createElement("tr")
+                        
+                        let oszlop = document.createElement("td")
+                        oszlop.innerHTML = e.vezeteknev
+
+                        sor.appendChild(oszlop)
+
+                        oszlop = document.createElement("td")
+                        oszlop.innerHTML = e.keresztnev
+
+                        sor.appendChild(oszlop)
+
+                        tablazat.appendChild(sor)
+
+                        
+
+                    })
+
+                }
+            )
+        }
+
+        function sorsol(maximum)
+        {
+            return Math.floor(Math.random()*maximum)
+        }
+
+        function cellatKeszit(sor,szoveg)
+        {
+            let oszlop = document.createElement("td")
+            oszlop.innerHTML = szoveg
+
+            sor.appendChild(oszlop)
+
+            return sor;
+        }
+
+    </script>
+    
+</body>
+</html>
