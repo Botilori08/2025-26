@@ -16,7 +16,7 @@
 </head>
 <body onload="betolt()">
 
-    <div id="kiir"></div>
+    <table id="kiir"></table>
 
     <script>
 
@@ -44,17 +44,19 @@
 
                     let td = document.createElement("td")
                     
-                    document.getElementById("sor"+index)
                     td.appendChild(img)
 
-                    if(index%10 == 0)
+                    tr.appendChild(td)
+
+                    if(index%10 == 9)
                     {
-                        console.log(index)
-                        tr.id = "sor"+index
-                        tr.appendChild(td)
                         kiir.appendChild(tr)
+                        console.log(index)
                         
+                        //tr.id = "sor"+index
+                        tr= document.createElement("tr")
                     }
+
 
                 })        
                 
