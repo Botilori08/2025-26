@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div>Idő: <span id="ido"></span></div>
+    <div>Holdfázis: <span id="holdfazis"></span>%</div>
+    <div>Változás: <span id="valtozas"></span></div>
+    <div><img src="" alt="hold" id="holdKep"></div>
+
+    <input type="date" id="datum">
+    <input type="time" id="oraperc">
+    <button onclick="kuldes()">Küldés</button>
+    
+    <script>
+    
+    function kuldes()
+    {
+        $.ajax({
+        url: "http://localhost/12B_1/2025-26/Webprogramoz%C3%A1s/Jquery/index.php",
+        data: {
+            nap : $("#datum").val(),
+            ido: $("#oraperc").val()
+        },
+        success: function( result ) {
+            $("#ido").text(result.idopont);
+            $("#holdfazis").text(result.holdfazis);
+            $("#valtozas").text(result.valtozas);
+            $("#holdKep").attr("src",result.kep)
+
+            
+        }
+        });
+    }
+
+    kuldes();
+    
+
+    </script>
+
+</body>
+</html>
