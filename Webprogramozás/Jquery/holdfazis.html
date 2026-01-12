@@ -13,14 +13,18 @@
     <div>Változás: <span id="valtozas"></span></div>
     <div><img src="" alt="hold" id="holdKep"></div>
 
+    <input type="month" id="honap">
     <input type="date" id="datum">
     <input type="time" id="oraperc">
     <button onclick="kuldes()">Küldés</button>
     
     <script>
     
+    let kepek = [];
+
     function kuldes()
     {
+
         $.ajax({
         url: "http://localhost/12B_1/2025-26/Webprogramoz%C3%A1s/Jquery/index.php",
         data: {
@@ -28,10 +32,13 @@
             ido: $("#oraperc").val()
         },
         success: function( result ) {
+            console.log(result)
             $("#ido").text(result.idopont);
             $("#holdfazis").text(result.holdfazis);
             $("#valtozas").text(result.valtozas);
             $("#holdKep").attr("src",result.kep)
+
+            
 
             
         }
