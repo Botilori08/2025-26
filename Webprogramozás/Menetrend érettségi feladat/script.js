@@ -19,12 +19,12 @@ function betolt()
             //AI Help
             const regex = /^(?<vonatId>\d+)\s+(?<allomasId>\d+)\s(?<ora>\d+)\s(?<perc>\d+)\s(?<tipus>[IE])$/gm;
 
-            let sorok2 = x.match(regex)
+            let sorok2 = x.match(regex);
 
             while((match = regex.exec(x)) !== null)
             {
                 adatok.push(match.groups)
-                console.log(match.groups)
+                adatok.at(-1)["idoPercben"] = parseInt(adatok.at(-1).ora)*60 + parseInt(adatok.at(-1).perc)
             }
             
             console.log(adatok)
@@ -36,14 +36,32 @@ function betolt()
 
 function feladat2()
 {
-    console.log("csaóó")
 
-    let vonatSzam = document.getElementById("vonatSzam");
+    let vonatSzamkiir = document.getElementById("vonatSzam");
 
-    let allomasSzam = document.getElementById("allomasSzam");
+    let allomasSzamkiir = document.getElementById("allomasSzam");
 
-    
-    
+    let vonatMax = 0;
+    let allomasMax = 0;
 
+    adatok.forEach(x => {
+
+        if(parseInt(x.vonatId) > vonatMax )
+        {
+            vonatMax = parseInt(x.vonatId);
+            
+
+        }
+        if(parseInt(x.allomasId) > allomasMax)
+        {
+            allomasMax = parseInt(x.allomasId);
+        }
+    })
+
+    vonatSzamkiir.innerHTML = vonatMax;
+
+    allomasSzamkiir.innerHTML = allomasMax+1;
+
+    //console.log(vonatMax)
 }
 
