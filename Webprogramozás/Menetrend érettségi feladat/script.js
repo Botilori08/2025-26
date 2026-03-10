@@ -65,3 +65,12 @@ function feladat2()
     //console.log(vonatMax)
 }
 
+function feladat3()
+{
+    let rendezett = adatok.toSorted((a,b) =>
+    {
+        
+    });
+}
+
+
