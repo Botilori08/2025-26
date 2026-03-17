@@ -36,6 +36,8 @@ function betolt()//1.feladat
                         pixel["cella"] = cella;
                         tablaSor.appendChild(cella);
 
+                        pixel["RGBSum"] = pixel.r+pixel.g+pixel.b;
+
                         kepAdatok[kepAdatok.length-1].push(pixel);
                     }
                     document.querySelector("#kep table").appendChild(tablaSor);
@@ -58,10 +60,50 @@ function feladat2()
 
     document.getElementById("feladat2-eredmeny").innerHTML = kepAdatok[sor-1][oszlop-1].RGB;
 
-    kepAdatok[sor-1][oszlop-1].cella.style.backgroundColor = yellow;
+    kepAdatok[sor-1][oszlop-1].cella.style.backgroundColor = "yellow";
+}
 
 
+function feladat3()
+{
+
+    let vilagosak = 0;
+
+    vilagosak = kepAdatok.flat().filter(x => x.RGBSum > 600);
+
+    //console.log(vilagosSzam);
+
+    document.getElementById("feladat3-eredmeny").innerHTML = vilagosak.length;
+}
+
+function feladat4()
+{
+    let minimum = kepAdatok[0][0].RGBSum;
     
+    kepAdatok.flat().forEach(e => 
+        {
+            if(e.RGBSum < minimum)
+            {
+                minimum = e.RGBSum;
+            }
+        }
+    )
+    console.log(minimum)
+
+    document.getElementById("feladat4-eredmeny").innerHTML = minimum;
+
+    let sotet = [];
+
+    kepAdatok.flat().forEach(e => 
+        {
+            if(e.RGBSum == minimum)
+            {
+                sotet.push(e.RGB)
+            }
+        }
+    )
+
+    document.getElementById("feladat4-lista").innerHTML = sotet.join(", ");
 
 
 }
