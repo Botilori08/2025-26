@@ -13,7 +13,7 @@ function betolt()//1.feladat
             const sorok = y.split("\r\n");
 
 
-            sorok.forEach(e =>
+            sorok.forEach((e,index) =>
                 {
 
                     kepAdatok.push([]);
@@ -28,7 +28,11 @@ function betolt()//1.feladat
                             r:parseInt(adatok[j]),
                             g:parseInt(adatok[j+1]),
                             b:parseInt(adatok[j+2]),
-                            RGB: `RGB(${adatok[j]},${adatok[j+1]},${adatok[j+2]})`
+                            RGB: `RGB(${adatok[j]},${adatok[j+1]},${adatok[j+2]})`,
+                            x: j/3,
+                            y:index,
+
+
                         }
 
                         let cella = document.createElement("td");
@@ -98,12 +102,45 @@ function feladat4()
         {
             if(e.RGBSum == minimum)
             {
-                sotet.push(e.RGB)
+                sotet.push(e.RGB);
+                console.log(e.x,e.y);
+                keretKeszit(e);
             }
         }
     )
 
-    document.getElementById("feladat4-lista").innerHTML = sotet.join(", ");
+    document.getElementById("feladat4-lista").innerHTML = "";
+
+    let lista = document.createElement("ol");
+
+    sotet.forEach(e => {
+
+        let listaElem = document.createElement("li")
+        listaElem.innerText = e;
+        lista.appendChild(listaElem)
+    })
+
+    document.getElementById("feladat4-lista").appendChild(lista);
+
+
+    /*
+    Másik megoldás innerHTML-lel
+    
+    let szoveg = "<ol><li>"+sotet.join("</li><li>")+"</li></ol>";
+
+    document.getElementById("feladat4-lista").innerHTML = szoveg;
+    */
+
+
+}
+
+function keretKeszit(e)
+{
+    //Bal oldalon van x == 0
+    if(e.x == 0)
+    {
+        
+    }
 
 
 }
