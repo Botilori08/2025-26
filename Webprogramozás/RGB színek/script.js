@@ -137,10 +137,17 @@ function feladat4()
 function keretKeszit(e)
 {
     //Bal oldalon van x == 0
-    if(e.x == 0)
-    {
-        
-    }
+
+    console.log("képpont:",e.x,":",e.y)
+
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y-1][e.x-1].cella.backgroundColor = "yellow";
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y-1][e.x].cella.backgroundColor = "yellow";
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y-1][e.x+1].cella.backgroundColor = "yellow";
+
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y][e.x-1].cella.backgroundColor = "yellow";
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y][e.x].cella.backgroundColor = "yellow";
+    if(kepAdatok[e.y-1] != undefined && kepAdatok[e.y-1][e.x-1] != undefined) kepAdatok[e.y][e.x+1].cella.backgroundColor = "yellow";
+
 
 
 }
