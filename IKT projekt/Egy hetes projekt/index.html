@@ -22,8 +22,8 @@
         </div>
         <div class="row border-dark">
             <div class="col-lg-4 bg-primary">
-                <h2>1.feladat</h2>
-                <button type="button" onclick="feladat1()">Végrehajt</button>
+                <h2>2.feladat</h2>
+                <button type="button" onclick="feladat2()" class="btn btn-secondary">Végrehajt</button>
             </div>
             <div class="col-lg-8 fs-3">
                 A leggyakoribb családnév a(z): <span id="feladat1-eredmeny">Eredmény</span>
@@ -32,6 +32,46 @@
     </div>
 
     <script>
+
+        let adatok = [];
+
+        document.body.onload=betolt();
+
+        function betolt()
+        {
+            fetch("nevek.txt")
+            .then(x => x.text())
+            .then(y => 
+                {
+
+                    let sorok = y.split("\r\n");
+
+                    sorok.forEach(e =>
+                        {
+                            let elem = e.split(";");
+                            adatok.push({osztaly : elem[0],nev : elem[1],osztalyfonok : elem[2]})
+                        }
+                    )
+                    
+
+                    console.log(adatok)
+                }
+            )
+        }
+
+
+        function feladat1()
+        {
+            let vezeteknevek = [];
+
+            adatok.forEach(e =>
+                {
+                    console.log(e.nev.split(" "));
+                }
+            )
+
+            console.log(vezeteknevek)
+        }
 
     </script>
 </body>
