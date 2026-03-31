@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Társasjáték</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h3>2.feladat</h3>
+    <p>Dobások száma: <span id="f2dobas">Eredmeny</span></p>
+    <p>Az ösvények száma: <span id="f2osveny">Eredmeny</span></p>
+    <button type="button" onclick="feladat2()">Végrehajt</button>
+
+    <script>
+
+        
+
+        let dobasok = [];
+        let osvenyek = [];
+
+        function betolt()
+        {
+            fetch("dobasok.txt")
+            .then(x => x.text())
+            .then(y => {
+                dobasok = y.split(" ").map(e => parseInt(e));
+                console.log(dobasok)
+            })
+
+            fetch("osvenyek.txt")
+            .then(x => x.text())
+            .then(y => {
+                osvenyek = y.split("\r\n");
+                osvenyek.pop();
+                console.log(osvenyek)
+            })
+
+            
+        }
+
+        function feladat2()
+        {
+            $("#f2dobas").html(dobasok.length);
+            $("#f2osveny").html(osvenyek.length);
+        }
+
+        function feladat3()
+        {
+            let max = Math.max(...osvenyek.map(x => x.length));
+            
+            let helye = osvenyek.map(x => x.length).indexOf(max);
+        }
+
+        betolt();
+    </script>
+
+</body>
+</html>
