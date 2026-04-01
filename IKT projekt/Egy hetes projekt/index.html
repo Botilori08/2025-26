@@ -10,9 +10,9 @@
 <body>
 
     <div class="container">
-        <div class="row bg-info"><h1>MMSZ Adatok</h1></div>
-        <div class="row border-dark">
-            <div class="col-lg-4 bg-primary">
+        <div class="row bg-danger"><h1>MMSZ Adatok</h1></div>
+        <div class="row">
+            <div class="col-lg-4 bg-warning">
                 <h2>1.feladat</h2>
                 <button type="button" onclick="feladat1()" class="btn btn-secondary">Végrehajt</button>
             </div>
@@ -20,8 +20,8 @@
                 A leggyakoribb családnév a(z): <span id="feladat1-eredmeny">Eredmény</span>
             </div>
         </div>
-        <div class="row border-dark">
-            <div class="col-lg-4 bg-primary">
+        <div class="row">
+            <div class="col-lg-4 bg-warning">
                 <h2>2.feladat</h2>
                 <button type="button" onclick="feladat2()" class="btn btn-secondary">Végrehajt</button>
             </div>
@@ -53,6 +53,7 @@
                         }
                     )
                     
+                    adatok.pop();
 
                     console.log(adatok)
                 }
@@ -64,13 +65,12 @@
         {
             let vezeteknevek = [];
 
-            adatok.forEach(e =>
-                {
-                    console.log(e.nev.split(" "));
-                }
-            )
-
+            console.log(adatok)
+            vezeteknevek = adatok.map(e => e.nev.split(" ")[0]);
             console.log(vezeteknevek)
+            
+            
+
         }
 
     </script>
