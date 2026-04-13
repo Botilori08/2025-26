@@ -67,10 +67,30 @@
 
             console.log(adatok)
             vezeteknevek = adatok.map(e => e.nev.split(" ")[0]);
-            console.log(vezeteknevek)
-            
             
 
+            let rendezett = vezeteknevek.toSorted()
+            
+            //console.log(rendezett)
+
+            /*const nevGyarkorisag = rendezett.reduce((gyujto, nev) => {
+            // Ha a név már szerepel a gyűjtőben, növeljük 1-gyel az értékét.
+            // Ha még nem szerepel, akkor a (gyujto[nev] || 0) miatt 0-ról indul, és hozzáadunk 1-et.
+            gyujto[nev] = (gyujto[nev] || 0) + 1;
+            return gyujto;
+            }, {}); 
+            // A {} a kezdőérték, egy üres objektum.*/
+
+            let nevekSzerint =[[]]
+
+            rendezett.filter(e => {
+
+                
+
+            });
+
+
+            //console.log(nevGyarkorisag)
         }
 
     </script>
