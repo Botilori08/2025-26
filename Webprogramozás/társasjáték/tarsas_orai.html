@@ -27,12 +27,20 @@
 
         </div>
                 <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <h3>4. feladat</h3>
-                    <select name="" id="osvenyValasztas">
+                    <select name="" id="osvenyValasztas" onchange="feladat5()">
                         <option value="" selected>Válassz mezőt</option>
                     </select>
                 </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>5. feladat</h3>
+                <div id="osvenyStat"></div>
+                
+            </div>
 
         </div>
     </div>
@@ -85,7 +93,6 @@
             $("#f3hossz").html(maxHossz);
 
             //document.querySelector("#f3szama").innerHTML = index
-
         }
 
         function feladat4()
@@ -103,9 +110,24 @@
                 }
             )
 
-            
         }
 
+        function feladat5()
+        {
+
+            let osvenyValasztas = document.getElementById("osvenyValasztas");
+
+            let osvenySzam = osvenyValasztas.options.selectedIndex-1;
+
+            let osveny = osvenyek[osvenySzam];
+
+            console.log(osveny)
+
+            
+
+        }
+
+        
         betolt();
     </script>
 
