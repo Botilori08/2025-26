@@ -29,7 +29,7 @@
                 <div class="row">
                 <div class="col-lg-12">
                     <h3>4. feladat</h3>
-                    <select name="" id="osvenyValasztas" onchange="feladat5()">
+                    <select name="" id="osvenyValasztas" onchange="feladat5();feladat6()">
                         <option value="" selected>Válassz mezőt</option>
                     </select>
                 </div>
@@ -38,7 +38,26 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3>5. feladat</h3>
-                <div id="osvenyStat"></div>
+                <ul id="osvenyStat"></ul>
+                
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>6. feladat</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mező</th>
+                            <th scope="col">Sorszám</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="f6Tabla">
+                        
+                    </tbody>
+                </table>
                 
             </div>
 
@@ -121,7 +140,7 @@
 
             let osveny = osvenyek[osvenySzam];
 
-            console.log(osveny)
+            //console.log(osveny)
 
             
             let mezok = {};
@@ -151,22 +170,71 @@
                 }
             })
 
-            console.log(mezok);
+            //console.log(mezok);
 
             
             let stat = document.getElementById("osvenyStat");
+            stat.innerHTML = "";
 
             Object.keys(mezok).forEach(mezo =>
                 {
-                    let div = document.createElement("div");
-                    div.innerHTML = `${mezo} : ${mezok[mezo]}`
-                    stat.appendChild(div);
+                    let li = document.createElement("li");
+                    li.innerHTML = `<span>${mezo}:</span> <span>${mezok[mezo]}</span>`;
+
+                    stat.appendChild(li);
 
                 }
             )
 
         }
 
+        function feladat6()
+        {
+            let osvenyValasztas = document.getElementById("osvenyValasztas");
+
+            let osvenySzam = osvenyValasztas.options.selectedIndex-1;
+
+            let osveny = osvenyek[osvenySzam];
+
+            let mezok = {};
+
+            osveny.split("").forEach((mezo,index) => {
+                //console.log(Object.keys(mezo));
+                //console.log(Object.values(mezo));
+
+                if(Object.keys(mezok).includes(mezo))
+                {
+                    mezok[mezo].push(index+1);//Ha van már ilyen kulcs: Megnöveljük az értékét
+                }
+                else
+                {
+                    mezok[mezo]= [index+1];//Ha nincs ilyen kulcs (találunk újat): Hozzáadjuk a kulcs értékét (1 lesz)
+                }
+            });
+
+            let table = document.getElementById("f6Tabla")
+            table.innerHTML = "";
+            Object.keys(mezok).forEach(mezo => {
+                if(mezo!="M")
+                {
+                    mezok[mezo].forEach(x =>
+                        {
+                            let tr = document.createElement("tr");
+                            let tdMezo = document.createElement("td");
+                            tdMezo.innerHTML = mezo;
+                            let tdSorszam = document.createElement("td");
+                            tdSorszam.innerHTML = x;
+
+                            tr.appendChild(tdMezo);
+                            tr.appendChild(tdSorszam);
+
+                            table.appendChild(tr);
+                        }
+                    )
+                }
+            });
+
+        }
         
         betolt();
     </script>
