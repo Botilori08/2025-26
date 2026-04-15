@@ -59,7 +59,7 @@
             .then(x => x.text())
             .then(y => {
                 dobasok = y.split(" ").map(e => parseInt(e));
-                console.log(dobasok)
+                //console.log(dobasok)
             })
 
             fetch("osvenyek.txt")
@@ -67,7 +67,7 @@
             .then(y => {
                 osvenyek = y.split("\r\n");
                 osvenyek.pop();
-                console.log(osvenyek);
+                //console.log(osvenyek);
                 feladat4();
             })
 
@@ -124,6 +124,46 @@
             console.log(osveny)
 
             
+            let mezok = {};
+
+            osveny.split("").forEach(mezo => {
+                //console.log(Object.keys(mezo));
+                //console.log(Object.values(mezo));
+
+                if(Object.keys(mezok).includes(mezo))
+                {
+                    mezok[mezo]++;//Ha van már ilyen kulcs: Megnöveljük az értékét
+                }
+                else
+                {
+                    mezok[mezo]=1;//Ha nincs ilyen kulcs (találunk újat): Hozzáadjuk a kulcs értékét (1 lesz)
+                }
+
+                //másik megoldás
+
+                if(mezok[mezo])
+                {
+                    mezok[mezo]++;
+                }
+                else
+                {
+                    mezok[mezo] = 1;
+                }
+            })
+
+            console.log(mezok);
+
+            
+            let stat = document.getElementById("osvenyStat");
+
+            Object.keys(mezok).forEach(mezo =>
+                {
+                    let div = document.createElement("div");
+                    div.innerHTML = `${mezo} : ${mezok[mezo]}`
+                    stat.appendChild(div);
+
+                }
+            )
 
         }
 
