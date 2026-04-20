@@ -58,7 +58,7 @@
                 <div class="row">
                 <div class="col-lg-12">
                     <h3>4. feladat</h3>
-                    <select name="" id="osvenyValasztas" onchange="feladat5();feladat6();feladat7()">
+                    <select name="" id="osvenyValasztas" onchange="feladat5();feladat6();feladat7();feladat8()">
                         <option value="" selected>Válassz mezőt</option>
                     </select>
                     <label for="jatekosSzam">Játékosok száma</label>
@@ -292,12 +292,21 @@
 
             palyaKeszit(osveny,false).forEach( e => palya.appendChild(e));
 
+            let jatekosSzam = document.getElementById("jatekosSzam")
+            
+            let dobasOsszegek = new Array(jatekosSzam).map(x => 0);
+
+            console.log(dobasOsszegek)
+
+            for(let i = 0;i < dobasok.length;i++)
+            {
+
+            }
             //console.log(palya);
         }
 
         function feladat8()
         {
-            let jatekosSzam = document.createElement("jatekosSzam")
 
             
         }
