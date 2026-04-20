@@ -29,6 +29,12 @@
             background-color: aqua;
         }
 
+        #palya
+        {
+            width: 100%;
+            overflow-x: none;
+        }
+
     </style>
     
 </head>
@@ -284,7 +290,7 @@
             let palya = document.getElementById("palya");
             palya.innerHTML="";
 
-            palyaKeszit(osveny,true).forEach( e => palya.appendChild(e));
+            palyaKeszit(osveny,false).forEach( e => palya.appendChild(e));
 
             //console.log(palya);
         }
